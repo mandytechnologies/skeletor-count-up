@@ -1,6 +1,6 @@
 {
 	"name": "skeletor-count-up",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -13,5 +13,11 @@
 	"devDependencies": {
 		"@wordpress/scripts": "^26.6.0",
 		"animejs": "^3.2.1"
+	},
+	"plugin_data": {
+		"author": "Quick Build",
+		"author_profile": "https://mandydesign.com",
+		"title": "Quick Build Count Up",
+		"download_url": "https://github.com/mandytechnologies/skeletor-count-up/archive/refs/heads/main.zip1"
 	}
 }

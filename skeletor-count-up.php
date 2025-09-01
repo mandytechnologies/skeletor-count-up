@@ -38,3 +38,15 @@ class Count_Up
 }
 
 add_action('plugins_loaded', ['Skeletor\Count_Up', 'plugins_loaded']);
+
+define('MANDY_TABBED_CONTENT_VERSION', '`1.0.3');
+
+if (!class_exists('\Skeletor\Plugin_Updater')) {
+	require_once(__DIR__ . '/class--plugin-updater.php');
+}
+
+$updater = new \Skeletor\Plugin_Updater(
+	plugin_basename(__FILE__),
+	MANDY_TABBED_CONTENT_VERSION,
+	'https://github.com/mandytechnologies/mandy-tabbed-content/blob/main/package.json'
+);
