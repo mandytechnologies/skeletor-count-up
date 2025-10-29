@@ -1,14 +1,19 @@
 <?php
 
 /**
- * Plugin Name:     Quick Build Count Up
- * Plugin URI:      https://quickbuildwebsite.com
- * Description:     Enqueue Javascript to process .count-up elements
- * Author:          Quick Build
- * Author URI:      https://quickbuildwebsite.com
- * Text Domain:     quickbuild
- * Version:         0.1.0
- *
+ * Plugin Name:           QB - Count Up
+ * Plugin URI:            https://github.com/mandytechnologies/skeletor-count-up
+ * Description:           Enqueue Javascript to process .count-up elements
+ * Version:               1.0.0
+ * Requires PHP:          7.0
+ * Requires at least:     6.1.0
+ * Tested up to:          6.8.2
+ * Author:                Quick Build
+ * Author URI:            https://www.quickbuildwebsite.com/
+ * License:               GPLv2 or later
+ * License URI:           https://www.gnu.org/licenses/
+ * Text Domain:           qb-count-up
+ * 
  */
 
 namespace Skeletor;
@@ -39,14 +44,14 @@ class Count_Up
 
 add_action('plugins_loaded', ['Skeletor\Count_Up', 'plugins_loaded']);
 
-define('MANDY_TABBED_CONTENT_VERSION', '`1.0.3');
+define('MANDY_COUNT_UP', '`1.0.0');
 
-if (!class_exists('\Skeletor\Plugin_Updater')) {
-	require_once(__DIR__ . '/class--plugin-updater.php');
-}
+require 'plugin-update-checker/plugin-update-checker.php';
 
-$updater = new \Skeletor\Plugin_Updater(
-	plugin_basename(__FILE__),
-	MANDY_TABBED_CONTENT_VERSION,
-	'https://github.com/mandytechnologies/mandy-tabbed-content/blob/main/package.json'
+$update_checker = \Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/mandytechnologies/skeletor-count-up',
+	__FILE__,
+	'skeletor-count-up'
 );
+
+require_once( 'includes/class-plugin.php' );

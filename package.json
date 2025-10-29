@@ -1,7 +1,7 @@
 {
-	"name": "skeletor-count-up",
-	"version": "0.1.0",
-	"description": "",
+	"name": "qb-count-up",
+	"version": "1.0.0",
+	"description": "Enqueue Javascript to process .count-up elements",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -16,8 +16,8 @@
 	},
 	"plugin_data": {
 		"author": "Quick Build",
-		"author_profile": "https://mandydesign.com",
-		"title": "Quick Build Count Up",
-		"download_url": "https://github.com/mandytechnologies/skeletor-count-up/archive/refs/heads/main.zip1"
+		"author_profile": "https://www.quickbuildwebsite.com/",
+		"title": "QB Count Up",
+		"download_url": "https://github.com/mandytechnologies/skeletor-count-up/archive/refs/heads/main.zip"
 	}
 }
